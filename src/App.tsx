@@ -12,22 +12,22 @@ export default function Page() {
 
   const getNoButtonText = () => {
     const phrases = [
-      "No",
-      "Are you sure?",
-      "What if I asked really nicely?",
-      "Pretty please",
-      "With a chocolate rice cake on top",
-      "What about a matcha frostie",
-      "PLEASE POOKIE",
-      "But :*(",
-      "I am going to die",
-      "Yep im dead",
-      "ok ur talking to nathan's ghost",
-      "please babe",
+      "아니요",
+      "정말로 확신하시나요?",
+      "진짜로 부탁드리면 어떨까요?",
+      "부탁드립니다",
+      "초콜릿 떡 위에 얹어서요",
+      "말차 프라푸치노는 어떨까요?",
+      "제발, 꼬옥",
+      "하지만 :*(",
+      "나 죽을 거야",
+      "응, 난 죽었어",
+      "알았어, 너 지금 네이던의 유령과 얘기하고 있어",
+      "제발, 자기야",
       ":((((",
-      "PRETTY PLEASE",
-      "Estoy muerto",
-      "No :(",
+      "진짜 부탁드려요",
+      "Estoy muerto (스페인어: 난 죽었어)",
+      "아니요 :(",
     ];
 
     return phrases[Math.min(noCount, phrases.length - 1)];
@@ -38,7 +38,9 @@ export default function Page() {
       {yesPressed ? (
         <>
           <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
-          <div className="my-4 text-4xl font-bold">WOOOOOO!!! I love you pookie!! ;))</div>
+          <div className="my-4 text-4xl font-bold">
+            WOOOOOO!!! 나도 너를 사랑해 pookie!! ;))
+          </div>
         </>
       ) : (
         <>
@@ -46,20 +48,20 @@ export default function Page() {
             className="h-[200px]"
             src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
           />
-          <h1 className="my-4 text-4xl">Will you be my Valentine?</h1>
+          <h1 className="my-4 text-4xl">당신의 발렌타인이 되어줄게요! 함께 특별한 날을 보내요. 🌹💖</h1>
           <div className="flex items-center">
             <button
               className={`mr-4 rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700`}
               style={{ fontSize: yesButtonSize }}
               onClick={() => setYesPressed(true)}
             >
-              Yes
+              물론이죠!
             </button>
             <button
               onClick={handleNoClick}
               className=" rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
             >
-              {noCount === 0 ? "No" : getNoButtonText()}
+              {noCount === 0 ? "싫어!" : getNoButtonText()}
             </button>
           </div>
         </>
